@@ -2,31 +2,50 @@
 
 \usepackage{template}
 
-\begin{document}  
+\ifpdf
+    \pdfinfo { /Title  (The automorphism group of the hyperenumeration degrees)
+               /Author (David Toth mmdt@leeds.ac.uk)
+               /CreationDate (D:)  %format D:YYYYMMDDhhmmss
+               /ModDate (D:20030815213532)
+               /Subject (Computability Theory)
+               /Keywords (Conference paper)}
+    \pdfcatalog { /PageMode (/UseOutlines)
+                  /OpenAction (fitbh)  }
+\fi
+
+\title{The automorphism group of\\the hyperenumeration degrees}
+\ifpdf
+  \author{\href{mailto:mmdt@leeds.ac.uk}{David Toth}}
+
+\else
+  \author{David Toth}
+\fi
+
+\begin{document}
+
+\maketitle
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+
+\tableofcontents
+
+%\mainmatter
 
 \section{Introduction}
-\begin{defn}
-This is a test.
-\end{defn}
-
-\begin{thm}
-Another test.
-\end{thm}
-Alpha particles (named after and denoted by the first letter in the
-
-\section{Preliminary theorems}
-
-\begin{thm}
-Theorem big, great
+\begin{thm}\label{defn_first}
+$1+1=2$
 \end{thm}
 
-\begin{defn}
-Defining, not knowing what.
-\end{defn}
+I would like to cite \cite{caidefining} and refer to \ref{defn_first}.
 
-\section{Other theorems}
-\begin{defn}
-That is it.
-\end{defn}
+%\include{Introduction/Introduction}
+%\include{Body/Chapter2}
+%\include{Appendix1/Appendix1}
+
+\bibliographystyle{plain}
+\bibliography{References/references} % References file
+\addcontentsline{toc}{chapter}{References} % Adds References to contents page
 
 \end{document} 
