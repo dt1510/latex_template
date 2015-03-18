@@ -1,0 +1,8 @@
+*
+
+!.gitignore
+!*.tex
+!*.sty
+
+# ...even if they are in subdirectories
+!*/

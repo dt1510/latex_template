@@ -1,0 +1,40 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{custom}[2013/01/13 Custom Package]
+
+\RequirePackage{lmodern}
+
+\RequirePackage{amsthm}
+\RequirePackage{amsmath}
+\RequirePackage{stmaryrd}
+%%\usepackage{unicode-math}
+\RequirePackage{amssymb}
+\RequirePackage{color}
+\RequirePackage{hyperref}
+\RequirePackage{nameref}
+
+%numbering for theorems, definitions, etc.
+\newcounter{counter} \numberwithin{counter}{section}
+
+%\theoremstyle{plain}
+\newtheorem{defn}[counter]{Definition}
+\newtheorem{notation}[counter]{Notation}
+\newtheorem{rmk}[counter]{Remark}
+\newtheorem{note}[counter]{Note}
+
+\newtheorem{lemma}[counter]{Lemma}
+\newtheorem{prop}[counter]{Proposition}
+\newtheorem{thm}[counter]{Theorem}
+\newtheorem{cor}[counter]{Corollary}
+\newtheorem{stat}[counter]{Statement}
+\newtheorem{fact}[counter]{Fact}
+
+\newtheorem{conj}[counter]{Conjecture}
+\newtheorem{prob}[counter]{Problem}
+
+\newtheorem{eg}[counter]{Example}
+\newtheorem{ex}[counter]{Exercise}
+
+%custom mathematical definitions
+\newcommand{\powerset}[1]{\mathcal{P} \left({ #1 }\right)}
+
+\endinput
